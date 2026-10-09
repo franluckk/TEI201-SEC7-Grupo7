@@ -1,9 +1,9 @@
 ### Información del Equipo
 - **Integrantes:**
-  - Nombre 1 - Rol 1
-  - Nombre 2 - Rol 2
-  - Nombre 3 - Rol 3
-  - Nombre 4 - Rol 4
+  - Carla Reyes - Rol 1
+  - Francisca Luck - Rol 2
+  - Ignacio Tejeda - Rol 3
+  - Sebastián Swinburn - Rol 4
   
 - **ODS Seleccionado:** [Número y nombre]
 - **Problema a resolver:** [Descripción breve]
