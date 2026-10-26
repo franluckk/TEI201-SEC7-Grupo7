@@ -76,8 +76,11 @@ Incluir en esta carpeta:
 ## Aprendizajes
 
 ### Técnicos
-- [Aprendizaje 1]
-- [Aprendizaje 2]
+- Manejo de arduino
+- Como funcionan los circuitos
+- Codigos
+- Aprendimos a usar GitHub
+- Organización de Equipo  
 
 ### De Diseño
 - [Aprendizaje 1]
@@ -90,8 +93,10 @@ Incluir en esta carpeta:
 ### Mejoras Planificadas
 
 **Hardware:**
-- [ ] [Mejora 1]
-- [ ] [Mejora 2]
+- [ Actuador lineal de 12 V, 500 N y 200 mm de carrera, idealmente de 15–20 mm/s y con finales de carrera internos. 
+] 
+- [ Driver BTS7960]
+- [1 fuente de 12 V y aproximadamente 10 A] 
 
 **Software:**
 - [ ] [Mejora 1]
