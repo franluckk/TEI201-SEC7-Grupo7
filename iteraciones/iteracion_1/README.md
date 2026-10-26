@@ -24,23 +24,19 @@ Nuestro prototipo alfa es una versión a escala que  demuestra cómo funcionarí
 ---
 
 ## Componentes Utilizados
-Placa ESP32
-Servomotor MG996R con brazo y tornillo
-Botón pulsador
-Protoboard
-Cables dupont 
-Cable USB 
-Fuente externa de 5V 
-Adaptador de alimentación 
 
 ### Hardware
-- Microcontrolador: [Modelo]
-- Sensores:
-  - [Sensor 1]
-  - [Sensor 2]
+- Microcontrolador: Placa ESP32
+  
+
 - Actuadores:
-  - [Actuador 1]
-- Otros: [Lista]
+- Servomotor MG996R con brazo y tornillo
+- Botón pulsador
+- Protoboard
+- Cables dupont 
+- Cable USB 
+- Fuente externa de 5V 
+- Adaptador de alimentación 
 
 ### Software
 - IDE: Arduino IDE
