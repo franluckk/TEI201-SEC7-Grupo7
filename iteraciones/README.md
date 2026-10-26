@@ -38,12 +38,12 @@ Cada carpeta debe incluir:
 | Aspecto | v1 | v2 | v3 |
 |---------|----|----|----| 
 | **Fecha** | [25/10/2026] | [fecha] | [fecha] |
-| **Sensores** | [lista] | [lista] | [lista] |
-| **Actuadores** | [lista] | [lista] | [lista] |
-| **Conectividad** | [tipo] | [tipo] | [tipo] |
+| **Entradas** | [Botón pulsador] | [lista] | [lista] |
+| **Actuadores** | [Servomotor MG996R] | [lista] | [lista] |
+| **Conectividad** | [ESP32, conexiones cableadas] | [tipo] | [tipo] |
 | **Encapsulado** | ❌ | Prototipo | Finalizado |
-| **Testing** | Solo equipo | 2 usuarios | 5+ usuarios |
-| **Funcionalidad** | 60% | 80% | 100% |
+| **Testing** | Prueba del equipo observada por el profesor | 2 usuarios | 5+ usuarios |
+| **Funcionalidad** | 100% | 80% | 100% |
 
 ---
 
@@ -54,9 +54,9 @@ Cada carpeta debe incluir:
 **Estado:** Prototipo alpha - Prueba de concepto
 
 **Características:**
-- [Primera versión a escala del sistema de apertura inclusiva. Busca comprobar que un botón pueda activar, a través del ESP32, un servomotor que represente el movimiento de apertura de una puerta.]
+- Primera versión a escala del sistema de apertura inclusiva. Busca comprobar que un botón pueda activar, a través del ESP32, un servomotor que represente el movimiento de apertura de una puerta.
 - Problemas principales identificados
-- Aprendizajes clave
+- Aprendimos a entender el circuito y los componentes. 
 
 ### Versión 2 (Iteración 2) - Primera Mejora
 **Fecha:** [XX/XX/2025]  
