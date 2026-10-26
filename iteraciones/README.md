@@ -37,7 +37,7 @@ Cada carpeta debe incluir:
 
 | Aspecto | v1 | v2 | v3 |
 |---------|----|----|----| 
-| **Fecha** | [fecha] | [fecha] | [fecha] |
+| **Fecha** | [25/10/2026] | [fecha] | [fecha] |
 | **Sensores** | [lista] | [lista] | [lista] |
 | **Actuadores** | [lista] | [lista] | [lista] |
 | **Conectividad** | [tipo] | [tipo] | [tipo] |
