@@ -19,7 +19,7 @@ Bill of Materials (Lista de materiales)
 5. Alimentación: fuente externa de 5 V para el servo y conexión USB para el ESP32
 
 ### Prototipo Final (Ideal):
-# Movimiento y estructura:
+## Movimiento y estructura:
 1. Actuador lineal 12V, 500 N y carrera de 200 mm
 2. Soportes metealicos articulados
 3. Brazo o estructura metálica
