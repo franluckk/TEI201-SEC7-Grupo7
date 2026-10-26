@@ -20,11 +20,10 @@ Bill of Materials (Lista de materiales)
 
 ### Prototipo Final (Ideal):
 #. Movimiento y estructura:
-Actuador lineal 12V, 500 N y carrera de 200 mm
-Soportes metealicos articulados
-Brazo
-Brazo o estructura metálica
-Abrazaderas removibles con protección de goma
+1. Actuador lineal 12V, 500 N y carrera de 200 mm
+2. Soportes metealicos articulados
+3. Brazo o estructura metálica
+4. Abrazaderas removibles con protección de goma
 
 2. Control eléctrico:
 ESP32
