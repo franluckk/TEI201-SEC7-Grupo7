@@ -55,8 +55,13 @@ Cada carpeta debe incluir:
 
 **Características:**
 - Primera versión a escala del sistema de apertura inclusiva. Busca comprobar que un botón pueda activar, a través del ESP32, un servomotor que represente el movimiento de apertura de una puerta.
-- Problemas principales identificados
-- Aprendimos a entender el circuito y los componentes. 
+- Problemas principales identificados:
+Para armar el prototipo alpha medimos la puerta de la Universida Adolfo Ibañez y de acuerdo a esto calculamos el motor que necesitabamos, pero este era muy difícil de encontrar por lo que tuvimos que usar un motor más común.
+La causa de este problema fue principalmente la cancelación de clases debido a las lluvias provocó que nos demoraramos en poder medir la puerta y cuando lo hicimos (más o menos una semana y media antes de la presentación del prototipo alpha) el motor que necesitabamos ya no llegaba a tiempo.
+Para solucionarlo hicimos el prototipo alpha a escala para poder utilizar un motor más pequeño. 
+- Aprendisajes:
+  Aprendimos a entender el circuito y los componentes.
+
 
 ### Versión 2 (Iteración 2) - Primera Mejora
 **Fecha:** [XX/XX/2025]  
