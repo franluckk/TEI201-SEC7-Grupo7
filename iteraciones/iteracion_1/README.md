@@ -67,14 +67,9 @@ Incluir en esta carpeta:
 ### Problemas Identificados
 
 1. **Problema 1:**
-   - Descripción: 
-   - Causa probable: 
-   - Solución propuesta: General 
-
-2. **Problema 2:**
-   - Descripción: [Detalles]
-   - Causa probable: [Análisis]
-   - Solución propuesta: [Plan]
+ Descripción: Para armar el prototipo alpha medimos la puerta de la Universida Adolfo Ibañez y de acuerdo a esto calculamos el motor que necesitabamos, pero este era muy difícil de encontrar por lo que tuvimos que usar un motor más común.
+   - Causa probable: La cancelación de clases debido a las lluvias provocó que nos demoraramos en poder medir la puerta y cuando lo hicimos (más o menos una semana y media antes de la presentación del prototipo alpha) el motor que necesitabamos ya no llegaba a tiempo.
+   - Solución propuesta: Hicimos el prototipo alpha a escala para poder utilizar un motor más pequeño.
 
 ---
 
