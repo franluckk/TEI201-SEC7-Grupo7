@@ -1,28 +1,24 @@
-#  Sistema Inclusivo de Apertura de Puertas - Grupo 7
+# Software - Documentación
 
-**Curso:** TEI201 - Taller de Diseño en Ingeniería  
-**Institución:** Design Engineering Center (DEC) - Universidad Adolfo Ibáñez  
-**Equipo:** Francisca, Carla, Sebastián e Ignacio  
+Esta carpeta contiene todo el código y documentación del software del prototipo Alpha IoT para el Sistema Inclusivo de Apertura de Puertas.
 
-##  Descripción del Proyecto
-Este proyecto aborda el **ODS 10 (Reducción de Desigualdades)** eliminando las barreras físicas que representan las puertas manuales convencionales para personas con movilidad reducida. Se alinea con el **ODS 12 (Producción y Consumo Responsables)** mediante un enfoque de instalación no invasiva, permitiendo automatizar puertas existentes mediante abrazaderas y soportes sin necesidad de perforar o reemplazar la infraestructura de la universidad.
+## Carpetas
+* **`src/`**: Código fuente del proyecto (`main.ino` para ESP32).
+* **`librerias/`**: Detalles de dependencias necesarias.
+* **`docs/`**: Documentación técnica, manual de operación y troubleshooting.
 
-El repositorio contiene el código, la documentación técnica y los diagramas de hardware de nuestro **Prototipo Alpha IoT Funcional**.
+## Stack Tecnológico
+* **Plataforma**: ESP32 (DOIT DEVKIT V1)
+* **Lenguaje**: C/C++
+* **IDE**: Arduino IDE 2.x
+* **Librerías principales**:
+  * `ESP32Servo` - Versión estándar del Library Manager (Obligatoria para control de PWM seguro).
 
-##  Estructura del Repositorio
-
-El proyecto está organizado en los siguientes directorios:
-
-*  **`/software`**: Código fuente para el microcontrolador ESP32, librerías dependientes (ESP32Servo) y documentación lógica del sistema (incluyendo mitigación de rebotes y gestión de consumo eléctrico).
-*  **`/hardware`**: Lista de materiales (BOM), diagramas de conexión, justificación de componentes y archivos base para la conceptualización 3D del encapsulado.
-*  **`/docs`**: Material de apoyo de presentaciones, guiones y manuales de operación (incluyendo el Avance #2).
-
-## Estado del Proyecto
-* [x] **Avance 1:** Definición del problema e ideación.
-* [x] **Avance 2:** Prototipo Alpha IoT Funcional (Validación de control ESP32, estabilidad eléctrica con fuente externa y mitigación de ruido térmico mediante software).
-* [ ] **Avance 3:** Escalabilidad a prototipo final (Implementación de actuador lineal de 12V y driver DC).
-
-## 🛠️ Tecnologías Utilizadas
-* **Hardware:** Microcontrolador ESP32, Servomotor MG996R (Fase Alpha).
-* **Software:** C/C++ (Arduino IDE), ESP32Servo.
-* **Modelado 3D:** Tinkercad (Diseño conceptual del encapsulado).
+## Instalación y Configuración
+1. **Instalar Arduino IDE**: Descargar versión 2.x desde arduino.cc.
+2. **Configurar ESP32**: Agregar la URL de tarjetas de Espressif en Preferencias e instalar la familia ESP32 desde el Gestor de Tarjetas.
+3. **Instalar Librerías**: Abrir el Library Manager y buscar `ESP32Servo` (por Kevin Harrington).
+4. **Cargar Código**:
+   * Abrir `src/main.ino`.
+   * Seleccionar placa "DOIT ESP32 DEVKIT V1" y el puerto COM correspondiente.
+   * Compilar y subir.
