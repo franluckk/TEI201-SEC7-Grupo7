@@ -12,14 +12,14 @@ Diagramas de circuitos y esquemáticos del sistema
 Bill of Materials (Lista de materiales)
 
 ### Prototipo Alpha:
-# Microcontrolador: ESP32
-# Entrada de activación: botón pulsador
-# Actuador: servomotor MG996R
-# Otros: protoboard y cables Dupont
-# Alimentación: fuente externa de 5 V para el servo y conexión USB para el ESP32
+1. Microcontrolador: ESP32
+2. Entrada de activación: botón pulsador
+3. Actuador: servomotor MG996R
+4. Otros: protoboard y cables Dupont
+5. Alimentación: fuente externa de 5 V para el servo y conexión USB para el ESP32
 
-Prototipo Final (Ideal):
-1. Movimiento y estructura:
+### Prototipo Final (Ideal):
+#. Movimiento y estructura:
 Actuador lineal 12V, 500 N y carrera de 200 mm
 Soportes metealicos articulados
 Brazo
