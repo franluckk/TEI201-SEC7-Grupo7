@@ -10,7 +10,7 @@ Diagramas de circuitos y esquemáticos del sistema
 
 #### `bom/`
 Bill of Materials (Lista de materiales)
-Prototipo Alpha:
+*Prototipo Alpha:
 Microcontrolador: ESP32
 Entrada de activación: botón pulsador
 Actuador: servomotor MG996R
