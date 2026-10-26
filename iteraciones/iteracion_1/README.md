@@ -2,7 +2,7 @@
 
 ## Información General
 
-**Fecha:** [XX/XX/2025]  
+**Fecha:** 25/10/2026  
 **Versión:** v1.0  
 **Estado:** Prototipo alpha - Prueba de concepto  
 **Avance asociado:** Planificación inicial / Avance #1
@@ -11,17 +11,27 @@
 
 ## Descripción
 
-Primera versión del prototipo, enfocada en validar la factibilidad técnica del concepto.
+Nuestro prototipo alfa es una versión a escala que  demuestra cómo funcionaría el sistema. Al presionar un botón, el ESP32 envía una señal al servomotor MG996R, que gira hasta una posición programada para representar la apertura de una puerta. Al presionar nuevamente, vuelve a su posición inicial.
 
 **Objetivo de esta iteración:**
 - Probar conexión de sensores básicos
 - Validar comunicación con microcontrolador
-- Demostrar concepto de actuación
-- Circuito básico en protoboard
-
+- Comprobar que el ESP32 detecte la activación del botón
+- Representar a escala la apertura y el retorno de una puerta
+- Controlar el servomotor MG996R mediante la ESP32
+- Verificar el funcionamiento básico del circuito en una protoboard
+  
 ---
 
 ## Componentes Utilizados
+Placa ESP32
+Servomotor MG996R con brazo y tornillo
+Botón pulsador
+Protoboard
+Cables dupont 
+Cable USB 
+Fuente externa de 5V 
+Adaptador de alimentación 
 
 ### Hardware
 - Microcontrolador: [Modelo]
