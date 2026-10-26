@@ -58,16 +58,16 @@ Incluir en esta carpeta:
 ## Resultados de Testing Inicial
 
 ### Funcionalidad Lograda
-✅ [Función 1]  
-✅ [Función 2]  
-❌ [Función 3 - no funcionó]
+✅ El botón activa la señal de entrada al ESP32.  
+✅ El ESP32 controla el servomotor MG996R 
+✅ El servo se mueve a la posición programada para representar la apertura y vuelva a su posición inicial al presionar nuevamente.
 
 ### Problemas Identificados
 
 1. **Problema 1:**
-   - Descripción: [Detalles]
-   - Causa probable: [Análisis]
-   - Solución propuesta: [Plan]
+   - Descripción: 
+   - Causa probable: 
+   - Solución propuesta: General 
 
 2. **Problema 2:**
    - Descripción: [Detalles]
