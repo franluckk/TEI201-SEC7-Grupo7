@@ -54,7 +54,7 @@ Cada carpeta debe incluir:
 **Estado:** Prototipo alpha - Prueba de concepto
 
 **Características:**
-- [Descripción breve]
+- [Primera versión a escala del sistema de apertura inclusiva. Busca comprobar que un botón pueda activar, a través del ESP32, un servomotor que represente el movimiento de apertura de una puerta.]
 - Problemas principales identificados
 - Aprendizajes clave
 
