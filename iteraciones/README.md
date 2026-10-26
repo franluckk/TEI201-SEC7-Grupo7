@@ -143,8 +143,12 @@ Cada carpeta debe incluir:
 ## Lecciones Aprendidas
 
 ### Técnicas
-- [Lección 1]
-- [Lección 2]
+- Manejo de arduino
+- Como funcionan los circuitos
+- Codigos
+- Aprendimos a usar GitHub
+- Organización de Equipo  
+  
 
 ### De Proceso
 - [Lección 1]
