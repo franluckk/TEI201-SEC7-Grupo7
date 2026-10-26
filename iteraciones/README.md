@@ -50,7 +50,7 @@ Cada carpeta debe incluir:
 ## Evolución del Diseño
 
 ### Versión 1 (Iteración 1) - Concepto Inicial
-**Fecha:** [XX/XX/2025]  
+**Fecha:** [25/10/2026]  
 **Estado:** Prototipo alpha - Prueba de concepto
 
 **Características:**
