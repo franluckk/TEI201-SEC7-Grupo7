@@ -4,44 +4,19 @@
 
 Instalar desde el Library Manager de Arduino IDE:
 
-1. **[Nombre Librería 1]** - v[X.X.X]
-   - Propósito: [Descripción]
-   - Instalación: `Sketch > Include Library > Manage Libraries > Buscar "[nombre]"`
-
-2. **[Nombre Librería 2]** - v[X.X.X]
-   - Propósito: [Descripción]
-   - Instalación: [Instrucciones]
-
----
+1. **[ESP32Servo]** - v[3.0.5 o superior]
+   * **Propósito**: Permite generar señales PWM por hardware de forma segura y específica para el ESP32, lo cual es obligatorio para controlar el servomotor MG996R, ya que la librería `Servo.h` clásica de Arduino no es compatible con la arquitectura del ESP32.
+   * **Instalación**: Sketch > Include Library > Manage Libraries > Buscar "ESP32Servo" (Autor: Kevin Harrington).
 
 ## Librerías Personalizadas/Modificadas
 
-Si hay librerías modificadas o no disponibles en Arduino IDE, incluir en esta carpeta:
-
-### Estructura
-```
-librerias/
-├── MiLibreria/
-│   ├── MiLibreria.h
-│   ├── MiLibreria.cpp
-│   ├── keywords.txt
-│   └── README.md
-```
-
-### Instalación Manual
-```bash
-# Copiar carpeta a Arduino libraries
-cp -r MiLibreria ~/Documents/Arduino/libraries/
-```
-
----
+*Para la fase de este prototipo Alpha, no se requieren librerías personalizadas. El filtrado de rebotes del botón (debounce) y el control de energía (`detach()`) se manejan de forma nativa en el código fuente.*
 
 ## Dependencias Completas
 
-Listar TODAS las librerías necesarias con versiones exactas:
+Listado de todas las librerías necesarias para compilar el proyecto:
 
 | Librería | Versión | Fuente | Obligatoria |
-|----------|---------|--------|-------------|
-| WiFi | Built-in | ESP32 Core | ✅ |
-| [Lib 1] | x.x.x | Arduino Library Manager | ✅ |
-| [Lib 2] | x.x.x | GitHub | ❌ |
+| :--- | :--- | :--- | :---: |
+| ESP32 Core | Built-in | Espressif Board Manager | ✅ |
+| ESP32Servo | >= 3.0.5 | Arduino Library Manager | ✅ |
