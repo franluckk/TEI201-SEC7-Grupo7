@@ -1,57 +1,13 @@
 # Documentación de Software
 
-## Contenido
+## Configuración de Parámetros
+Editar las siguientes constantes en `main.ino` en caso de cambiar el cableado:
 
-### Diagramas de Flujo
-Incluir diagramas de las funciones principales del sistema.
-
-**Formato:** PNG, PDF o draw.io
-
-### Documentación de Funciones
-
-#### Funciones Principales
-
-**función1()**
-- **Propósito:** [Descripción]
-- **Parámetros:** [Tipo y descripción]
-- **Retorna:** [Tipo y descripción]
-- **Ejemplo de uso:**
 ```cpp
-// Código de ejemplo
-```
+// Pines de control
+const int pinServo = 18; // Pin de señal PWM para el MG996R
+const int pinBoton = 4;  // Pin de lectura del pulsador
 
----
-
-## Manual de Instalación
-
-[Paso a paso detallado para instalar y configurar el software]
-
----
-
-## Manual de Operación
-
-### Encendido del Sistema
-1. [Paso 1]
-2. [Paso 2]
-
-### Operación Normal
-1. [Paso 1]
-2. [Paso 2]
-
-### Apagado del Sistema
-1. [Paso 1]
-2. [Paso 2]
-
----
-
-## Troubleshooting
-
-### Problemas Comunes
-
-**Problema 1: No conecta a WiFi**
-- Causa probable: [Explicación]
-- Solución: [Pasos]
-
-**Problema 2: Sensor no responde**
-- Causa probable: [Explicación]
-- Solución: [Pasos]
+// Límites de pulso seguros
+// 1000 a 2000 microsegundos para evitar choques mecánicos internos del actuador
+motorPuerta.attach(pinServo, 1000, 2000);
