@@ -55,6 +55,6 @@ Listar parámetros principales utilizados:
 |---------|-------|---------------------|
 | v3.0 | [Fecha] | Versión final para Avance #3 |
 | v2.1 | [Fecha] | Ajustes post Avance #2 |
-| v1.0 | [Fecha] | Primera versión funcional |
+| v1.0 | 2026-10-28 | Primera versión funcional |
 
 ---
