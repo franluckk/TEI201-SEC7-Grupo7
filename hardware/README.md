@@ -18,21 +18,28 @@ Bill of Materials (Lista de materiales)
 - Otros: protoboard y cables Dupont
 - Alimentación: fuente externa de 5 V para el servo y conexión USB para el ESP32
 
-### Prototipo Final (Ideal):
+### Prototipo Final:
 ### Movimiento y estructura
-- Actuador lineal 12V, 500 N y carrera de 200 mm
-- Soportes metealicos articulados
-- Brazo o estructura metálica
-- brazaderas removibles con protección de goma
+- Actuador lineal ARF03-12-A1-305-200-C11
+  - Alimentación: 12 V DC
+  - Carrera: 200 mm
+  - Carga máxima indicada: 1500 N
+  - Velocidad indicada: 6 mm/s
+  - Ciclo de trabajo indicado: 10 %
+  - Finales de carrera internos en ambos extremos
+- Fuente incluida con el actuador
+  - Entrada: 100–240 V AC, 50/60 Hz
+  - Salida: 12 V DC, 5 A
 
 ### Control eléctrico
 - ESP32
-- Pulsador grande
 - Driver BTS7960
-- Fuente de 12 V y aproximadamente 10 A
+- Convertidor DC-DC: entrada de 12 V y salida de 5 V, hasta 3 A
+- Fuente incluida con el actuador
+  - Entrada: 100–240 V AC, 50/60 Hz
+  - Salida: 12 V DC, 5 A
 - 2 pulsadores
-- Cables y conectores o borneras
-- Fusible con portafusible
+- Cables y conectores
 
 
 #### `fotos/`
@@ -64,7 +71,13 @@ Fotografías de alta resolución del prototipo ensamblado
 **Consumo:** [Watts/mA]  
 **Dimensiones:** [mm x mm x mm]  
 **Peso:** [gramos]
-
+| Componente | Especificaciones disponibles |
+|---|---|
+| Actuador lineal | 12 V DC, carrera de 200 mm, carga máxima indicada de 1500 N, velocidad de 6 mm/s, ciclo de trabajo de 10 % |
+| Fuente del actuador | Entrada de 100–240 V AC; salida de 12 V DC, 5 A |
+| Convertidor DC-DC | Entrada de 12 V; salida de 5 V, hasta 3 A |
+| ESP32 | Modelo específico y consumo por confirmar |
+| BTS7960 | Módulo puente H; corriente de operación del sistema por verificar |
 ---
 
 ## Troubleshooting
