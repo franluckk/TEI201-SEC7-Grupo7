@@ -43,7 +43,7 @@ Esta lista registra los componentes utilizados o previstos para los prototipos d
 
 ## Presupuesto Total
 
-**Costo total registrado: aproximadamente $139.770 CLP.**
+**Costo total registrado: aproximadamente $131.770 CLP.**
 
 Este total suma los componentes del prototipo final y del Prototipo Alpha.
 
