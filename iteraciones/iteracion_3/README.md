@@ -22,7 +22,7 @@ Versión final del prototipo, incorporando todas las mejoras y refinamientos bas
 
 ---
 
-## Cambios Respecto a v2
+## Cambios Respecto a v1
 
 ### Hardware
 **Mejoras implementadas:**
