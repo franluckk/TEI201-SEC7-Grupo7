@@ -2,10 +2,12 @@
 
 ## Información General
 
-**Fecha:** [XX/XX/2025]  
-**Versión:** v3.0  
-**Estado:** Prototipo de alta resolución - Versión final  
-**Avance asociado:** Avance #3
+**Fecha:** 22/11/202  
+**Versión:** v2.0  
+**Estado:** Prototipo final documentado para la entrega; sujeto a ajustes
+**Avance asociado:** Avance #2
+**Proyecto:** Sistema de apertura asistida para una puerta  
+
 
 ---
 
@@ -20,6 +22,7 @@ Versión final del prototipo, incorporando todas las mejoras y refinamientos bas
 - Métricas de impacto ODS cuantificadas
 - Sistema instalable en contexto urbano real
 
+> > Esta documentación registra el estado del prototipo al momento de subirlo a GitHub. El diseño y el montaje pueden recibir ajustes antes de la presentación. Si se realizan cambios, se informarán durante la presentación del 27/11/2026.
 ---
 
 ## Cambios Respecto a v1
