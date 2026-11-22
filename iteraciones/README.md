@@ -14,9 +14,8 @@ Cada iteración tiene su propia carpeta con documentación de esa versión:
 
 ```
 iteraciones/
-├── iteracion_1/    # Concepto inicial - Prototipo alpha
-├── iteracion_2/    # Primera iteración - Avance #2
-└── iteracion_3/    # Versión final - Avance #3
+├── iteracion_1/    # Concepto inicial - Prototipo alpha   
+└── iteracion_2/    # Versión final 
 ```
 
 ---
