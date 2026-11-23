@@ -44,19 +44,13 @@ El diseño busca que el sistema pueda adaptarse a distintas puertas, aunque su c
 
 ### Alcance de esta evaluación
 
-La prueba cualitativa realizada con cuatro participantes permitió recoger observaciones sobre el uso del sistema y la necesidad de incluir instrucciones visibles en espacios públicos. No se midieron indicadores específicos de impacto ODS ni se calcularon porcentajes de mejora; por lo tanto, esta sección describe la relación y contribución potencial del proyecto, no resultados cuantitativos.
+El proyecto busca adaptar una puerta existente mediante un sistema removible, sin reemplazarla ni modificar permanentemente la infraestructura del edificio. También se reutiliza la ESP32 del prototipo Alpha y se dispone de filamento para fabricar la caja electrónica, evitando comprar nuevamente esos materiales.
+
+El gasto registrado del proyecto hasta esta etapa es de aproximadamente **$131.770 CLP**. Este cálculo considera los componentes comprados para los prototipos Alpha y final, y cuenta la ESP32 una sola vez porque se reutilizó en la versión final.
+
+Como referencia, se encontraron sistemas comerciales de automatización para puertas peatonales publicados en Chile por **$875.990 + IVA** y **$1.427.645 IVA incluido**. Son productos distintos y sus precios pueden depender de los accesorios, la instalación y las condiciones de cada puerta; por eso, esta comparación es referencial y no demuestra por sí sola un ahorro equivalente.
+
+La contribución al ODS 12 se relaciona con reutilizar componentes y adaptar una puerta existente en vez de reemplazarla. La posibilidad de instalar el sistema en distintas puertas dependerá de que sus dimensiones y condiciones de montaje sean compatibles.
 ---
 
-## Visualización de Datos
 
-Incluir gráficos generados (exportar desde Excel como PNG):
-
-- `grafico_usabilidad.png`
-- `grafico_satisfaccion.png`
-- `grafico_impacto_ods.png`
-- `grafico_comparativa_versiones.png`
-
-**Herramientas recomendadas:**
-- Excel / Google Sheets
-- Python (matplotlib, seaborn)
-- R / RStudio
