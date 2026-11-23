@@ -25,10 +25,9 @@ iteraciones/
 Cada carpeta debe incluir:
 
 1. **README.md** - Descripción de la versión
-2. **Fotos** - Imágenes del prototipo en ese estado
-3. **Esquema** - Circuito de esa versión (si cambió)
-4. **Código** - Versión del software (si cambió)
-5. **Notas** - Problemas identificados y mejoras planificadas
+2. **Esquema** - Circuito de esa versión (si cambió)
+3. **Código** - Versión del software (si cambió)
+4. **Notas** - Problemas identificados y mejoras planificadas
 
 ---
 
