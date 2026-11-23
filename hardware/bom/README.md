@@ -37,7 +37,6 @@ Esta lista registra los componentes utilizados o previstos para los prototipos d
 
 - `bom_completo.xlsx` - Lista completa de materiales
 - `bom_completo.pdf` - Versión PDF para visualización
-- `datasheets/` - Carpeta con PDFs de componentes críticos
 
 ---
 
@@ -57,5 +56,3 @@ La ESP32 se cuenta una sola vez, aunque se utilice en ambos prototipos. El total
 - **Conexiones del Prototipo Alpha:** aproximadamente $4.490 CLP (conector DC hembra: $2.990; cables comprados para el Alpha: aproximadamente $1.500).
 - **Caja 3D:** $0 CLP en filamento para el equipo; se utilizará filamento que ya tenía un integrante.
 - **Componentes proporcionados por el DEC o ya disponibles:** $0 CLP registrados (servomotor MG996R, botones del prototipo final, protoboard y cables que el equipo ya tenía).
-
-> Los costos de soportes y elementos de fijación están pendientes de definir.```
