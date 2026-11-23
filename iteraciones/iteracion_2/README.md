@@ -59,36 +59,45 @@ Desarrollar un prototipo que permita controlar la apertura y el cierre de una pu
 
 ## Resultados Finales
 
-### Funcionalidad Completa
-✅ [Todas las funciones planificadas]  
-✅ Sistema opera sin intervención manual  
-✅ Conectividad estable  
-✅ Interfaz de usuario funcional  
-✅ Manejo robusto de errores  
+### Prueba de uso
 
-### Testing con 5+ Usuarios
+La prueba se realizó en el hogar de un integrante del equipo con cuatro participantes: Cuatro integrantes del grupo familiar de un integrante del grupo. Se observó si comprendían cómo activar el sistema y se recogieron comentarios sobre su uso.
 
-**Participantes:**
-- N = [número] usuarios
-- Perfil: [Descripción del grupo objetivo]
+| Participante | Edad | Relación con el equipo | ¿Comprendió cómo usarlo? | Observación o sugerencia |
+|---|---:|---|---|---|
+| P01 | 53 años | Familiar de un integrante | Sí | Comprendió cómo activar el sistema durante la prueba en el hogar. |
+| P02 | 54 años | Familiar de un integrante | Sí | Sugirió incluir un cartel que explique qué botón presionar si el sistema se instala en un espacio público. |
+| P03 | 21 años | Familiar de un integrante | Sí | Comprendió cómo activar el sistema durante la prueba. |
+| P04 | 16 años | Familiar de un integrante | Sí | Comprendió cómo activar el sistema durante la prueba. |
 
-**Resultados cuantitativos:**
-| Métrica | Promedio | Desv. Std. |
-|---------|----------|------------|
-| Facilidad de uso (1-5) | [X.X] | [X.X] |
-| Satisfacción (1-5) | [X.X] | [X.X] |
-| Tiempo completar tarea (seg) | [XX] | [XX] |
-| Errores cometidos | [X.X] | [X.X] |
+Se utilizan códigos para identificar a los participantes y resguardar sus datos personales.
 
-**Feedback cualitativo más relevante:**
-- Positivo: "[Cita de usuario]"
-- Positivo: "[Cita de usuario]"
-- A mejorar: "[Cita de usuario]"
+### Resultados observados
 
-### Validación de Impacto ODS
+- Las cuatro personas comprendieron cómo activar el sistema en el contexto de la prueba en el hogar.
+- Los participantes valoraron que el sistema se accione mediante botones y sea fácil de usar.
+- El sistema podría ser útil para personas con movilidad reducida y también para quienes necesiten abrir una puerta con las manos ocupadas, por ejemplo, al llevar objetos.
+- La prueba se realizó en un hogar, donde las personas podían conocer el propósito del prototipo. En un espacio público se necesitaría un cartel visible con instrucciones de uso.
+- La prueba fue cualitativa. No se registraron tiempos de tarea, tasas de error ni puntajes de satisfacción, por lo que no se presentan promedios ni porcentajes.
 
-**ODS Seleccionado:** [Número y nombre]
+### Comentarios cualitativos
 
+La experiencia en un hogar facilitó que los participantes entendieran para qué servía el sistema. En un espacio público, las personas podrían desconocer su función; por eso, se recomienda instalar instrucciones claras y visibles que indiquen qué botón presionar para abrir la puerta. En una vivienda, quienes usan el sistema habitualmente pueden conocer su funcionamiento.
+
+### Validación de impacto ODS
+
+**ODS relacionados:** ODS 10, Reducción de las desigualdades; y ODS 12, Producción y consumo responsables.
+
+- **ODS 10:** El proyecto busca facilitar la apertura de una puerta a personas con movilidad reducida y a quienes puedan beneficiarse de una apertura asistida.
+- **ODS 12:** El diseño removible busca adaptar una puerta existente sin modificarla permanentemente ni reemplazarla. También se reutiliza la ESP32 del prototipo Alpha y se considera filamento disponible en el equipo para fabricar la caja electrónica.
+
+Esta relación describe el propósito y el diseño del prototipo. La prueba realizada no mide por sí sola el impacto de la solución en una comunidad ni demuestra que sea compatible con cualquier puerta.
+
+### Alcance y aspectos pendientes
+
+La prueba se realizó en un hogar y sus resultados corresponden a ese contexto y a las cuatro personas participantes. No representa una validación en la universidad ni en un recinto público.
+
+La compatibilidad depende de las dimensiones de la puerta y de que se resuelva una unión mecánica removible entre el actuador, el soporte y la puerta. La instalación no debe requerir perforaciones ni modificaciones permanentes en la puerta. El montaje y la demostración final pueden incorporar ajustes; los cambios se explicarán durante la presentación.
 **Métricas de impacto:**
 
 1. **[Métrica 1]**
