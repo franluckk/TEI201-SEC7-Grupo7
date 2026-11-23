@@ -54,17 +54,6 @@ Desarrollar un prototipo que permita controlar la apertura y el cierre de una pu
 - Esta iteración está diseñada para accionar una puerta mediante el desplazamiento lineal del actuador.
 - Para transmitir ese movimiento a la puerta se necesita una unión mecánica entre el actuador, una parte fija de la estructura y la puerta.
 
----
-
-## Fotos del Prototipo Final
-
-Incluir en esta carpeta:
-- `v3_prototipo_final_frontal.jpg`
-- `v3_prototipo_final_posterior.jpg`
-- `v3_interior_componentes.jpg`
-- `v3_instalado_contexto.jpg`
-- `v3_detalle_sensores.jpg`
-- `v3_testing_usuarios.jpg` (múltiples)
 
 ---
 
