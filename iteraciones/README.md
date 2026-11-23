@@ -126,8 +126,8 @@ Al momento de subir esta documentación el prototipo pueden tener mejoras antes 
 ## Incorporación de Feedback
 
 ### Feedback del Avance #1 → Cambios en v2
-1. [Comentario profesor/ayudante]
-   - Acción tomada: [Descripción]
+1. - Antes de comprar o integrar un componente, es importante investigar para qué sirve, qué requisitos tiene y cómo se conecta con los demás. Esto ayuda a elegir las piezas adecuadas y a estimar mejor el costo del prototipo.
+  
 
 ---
 
@@ -153,9 +153,15 @@ Al momento de subir esta documentación el prototipo pueden tener mejoras antes 
   
 
 ### De Proceso
-- [Lección 1]
-- [Lección 2]
+- Medir la puerta y definir el mecanismo con anticipación ayuda a elegir un actuador adecuado y planificar su montaje.
+- Conviene comprobar desde el inicio la disponibilidad de los componentes, porque puede ser necesario adaptar el prototipo a lo que se consigue a tiempo.
+- Probar primero una representación a escala permite revisar el control del movimiento, pero después hay que validar el sistema en la aplicación para la que fue diseñado.
+- Es importante avanzar en paralelo con el circuito, el código y el diseño mecánico, y revisar que las tres partes sean compatibles.
+- Registrar lo que está construido, lo que está pendiente y lo que ya se probó evita presentar como validado algo que todavía está en desarrollo.
 
 ### De Trabajo en Equipo
-- [Lección 1]
-- [Lección 2]
+- Coordinar las decisiones de hardware, software y diseño mecánico ayuda a que los componentes sean compatibles entre sí.
+- Definir con anticipación qué integrante se encarga de cada tarea facilita el avance del prototipo.
+- Compartir las medidas y los requisitos de la puerta entre quienes trabajan en el actuador y en la estructura permite diseñar un montaje coherente.
+- Documentar los avances en GitHub ayuda a que el equipo tenga una referencia común del estado del proyecto.
+- La disponibilidad de los integrantes y de los componentes puede afectar los tiempos. 
