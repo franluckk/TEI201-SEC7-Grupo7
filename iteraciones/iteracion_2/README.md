@@ -100,100 +100,106 @@ La prueba se realizó en un hogar y sus resultados corresponden a ese contexto y
 La compatibilidad depende de las dimensiones de la puerta y de que se resuelva una unión mecánica removible entre el actuador, el soporte y la puerta. La instalación no debe requerir perforaciones ni modificaciones permanentes en la puerta. El montaje y la demostración final pueden incorporar ajustes; los cambios se explicarán durante la presentación.
 **Métricas de impacto:**
 
-1. **[Métrica 1]**
-   - Baseline (sin prototipo): [Valor]
-   - Con prototipo: [Valor medido]
-   - Mejora: [% o valor absoluto]
+**Indicadores de impacto considerados:**
 
-2. **[Métrica 2]**
-   - Baseline: [Valor]
-   - Con prototipo: [Valor medido]
-   - Mejora: [% o valor absoluto]
+- **Accesibilidad (ODS 10):** el sistema busca facilitar la apertura de una puerta a personas con movilidad reducida y a quienes tengan las manos ocupadas. Este propósito se observó cualitativamente durante una prueba en un hogar; no se midió su impacto en una comunidad.
+- **Adaptación de infraestructura existente (ODS 12):** el diseño busca instalarse de forma removible, sin perforar ni modificar permanentemente la puerta. La solución de montaje todavía debe verificarse en la instalación.
+- **Reutilización de componentes (ODS 12):** se reutiliza la ESP32 del prototipo Alpha y se considera usar filamento disponible en el equipo para la caja electrónica.
 
-**Proyección de impacto:**
-Si se despliega a escala [barrio/ciudad/región]:
-- [Impacto estimado cuantitativo]
-- [Beneficiarios potenciales]
+No se calcularon porcentajes de mejora ni proyecciones de beneficiarios, porque no se recopilaron datos para realizar esos cálculos.
 
 ---
 
-## Comparación de las 3 Iteraciones
+## Comparación de las 2 Iteraciones
 
-| Aspecto | v1 | v2 | v3 | Mejora Total |
-|---------|----|----|----| -------------|
-| **Sensores** | 2/3 | 3/3 | 3/3 | ✅ 100% |
-| **Actuadores** | 1/2 | 2/2 | 2/2 | ✅ 100% |
-| **Tiempo respuesta (ms)** | 500 | 200 | 100 | ↓ 80% |
-| **Consumo (mA)** | 250 | 180 | 120 | ↓ 52% |
-| **Tasa errores (%)** | 15 | 5 | 1 | ↓ 93% |
-| **Encapsulado** | ❌ | Prototipo | Finalizado | ✅ |
-| **Usuarios testeados** | 0 | 2 | 5+ | ✅ |
-| **Satisfacción (1-5)** | - | 3.8 | 4.5 | ↑ 18% |
-| **Impacto ODS validado** | ❌ | Parcial | ✅ Completo | ✅ |
+| Aspecto | Iteración 1: prototipo Alpha | Iteración 2: sistema para puerta |
+|---|---|---|
+| Propósito | Comprobar el control del movimiento con una prueba a escala. | Diseñar un sistema removible para accionar una puerta mediante un actuador lineal. |
+| Movimiento | El servomotor movía una tablita, no accionaba una puerta. | El actuador lineal está destinado a producir el movimiento de apertura y cierre. |
+| Controlador | ESP32. | Se reutiliza la ESP32. |
+| Actuador | Servomotor MG996R. | Actuador lineal de 12 V, modelo ARF03-12-A1-305-200-C11. |
+| Control de movimiento | El servomotor era controlado desde el circuito del Alpha. | Se considera un driver BTS7960 para controlar la extensión y retracción del actuador. |
+| Entradas | Un botón pulsador. | Dos botones pulsadores. |
+| Montaje mecánico | Prueba a escala, sin unión a una puerta real. | fijación removible entre el actuador, un soporte y la puerta, sin perforarla ni modificarla permanentemente. |
+| Prueba con personas | No se registró una prueba de uso con participantes. | Prueba cualitativa en un hogar con cuatro participantes. |
+| Resultados de uso | No aplica: el prototipo representaba el movimiento mediante una tablita. | Los cuatro participantes comprendieron cómo usarlo en el contexto de la prueba. Se sugirió incluir instrucciones visibles para un posible uso en espacios públicos. |
+| Métricas cuantitativas | No registradas. | No se registraron tiempos, tasas de error ni promedios de satisfacción. |
 
 ---
 
-## Fortalezas del Prototipo Final
+## Fortalezas del Prototipo de la Iteración 2
 
-1. **[Fortaleza 1]**
-   - Evidencia: [Datos de testing]
+1. **Pasa de una prueba a escala a un diseño pensado para accionar una puerta.**
+   - En el prototipo Alpha, el servomotor movía una tablita.
+   - En esta iteración se considera un actuador lineal de 12 V para generar el movimiento de apertura y cierre.
 
-2. **[Fortaleza 2]**
-   - Evidencia: [Feedback de usuarios]
+2. **Tiene un control simple de comprender.**
+   - Se consideran dos botones pulsadores, ubicados a ambos lados de la puerta.
+   - En la prueba realizada en un hogar, las cuatro personas participantes comprendieron cómo usar el sistema.
 
-3. **[Fortaleza 3]**
-   - Evidencia: [Métricas técnicas]
-
+3. **Busca adaptarse a una puerta existente de forma removible.**
+   - El diseño busca evitar perforaciones o modificaciones permanentes en la puerta.
+ 
 ---
 
 ## Limitaciones Identificadas
 
-1. **[Limitación 1]**
-   - Descripción: [Detalles]
-   - Impacto: [Evaluación]
-   - Posible solución futura: [Ideas]
+1. **Prueba realizada solo en un hogar**
+   - **Descripción:** participaron cuatro personas en una prueba cualitativa en el hogar de un integrante del equipo.
+   - **Impacto:** los resultados no permiten asegurar cómo funcionaría el sistema en un recinto público o con una cantidad mayor de usuarios.
+   - **Trabajo futuro:** realizar pruebas adicionales en distintos contextos y registrar las observaciones de cada sesión.
 
-2. **[Limitación 2]**
-   - Descripción: [Detalles]
-   - Impacto: [Evaluación]
-   - Posible solución futura: [Ideas]
+2. **Falta de instrucciones para personas que no conocen el sistema**
+   - **Descripción:** durante la prueba en el hogar, las personas conocían el contexto de uso. Para un espacio público, alguien podría no saber qué botón presionar.
+   - **Impacto:** la falta de indicaciones podría dificultar el primer uso.
+   - **Trabajo futuro:** incorporar un cartel visible y breve que explique cómo activar la apertura.
+
+3. **Sin métricas cuantitativas de uso**
+   - **Descripción:** no se registraron tiempos de tarea, tasas de error ni puntajes de satisfacción.
+   - **Impacto:** no es posible calcular promedios ni porcentajes de mejora.
+   - **Trabajo futuro:** definir una pauta de observación y recopilar esas mediciones en futuras pruebas.
 
 ---
 
 ## Aprendizajes del Proceso Completo
 
 ### Técnicos
-1. [Aprendizaje técnico importante]
-2. [Aprendizaje técnico importante]
+
+1. El prototipo Alpha permitió probar el control del movimiento con una ESP32 y un servomotor, pero mover una tablita a escala no demuestra que el sistema pueda accionar una puerta.
+2. Para pasar a un actuador lineal se deben considerar su alimentación, el driver de control y la forma de conectar mecánicamente el actuador con la puerta.
 
 ### De Diseño
-1. [Lección sobre proceso de diseño]
-2. [Lección sobre proceso de diseño]
+
+1. Diseñar para una puerta real exige considerar sus dimensiones y definir puntos de apoyo para el actuador.
+2. La condición de que el sistema sea removible debe incorporarse desde el diseño de la fijación, evitando perforar o modificar permanentemente la puerta.
 
 ### De Trabajo en Equipo
-1. [Lección sobre colaboración]
-2. [Lección sobre colaboración]
+
+1. El proyecto requiere coordinar decisiones de electrónica, programación y diseño mecánico para que los componentes funcionen como un sistema.
+2. Las pruebas y los comentarios de otras personas ayudan a detectar aspectos que el equipo puede pasar por alto, como la necesidad de instrucciones visibles en espacios públicos.
 
 ### De Gestión de Proyecto
-1. [Lección sobre planificación]
-2. [Lección sobre gestión de tiempo]
+
+1. Medir la puerta y verificar la disponibilidad de componentes con anticipación ayuda a tomar decisiones de diseño más realistas.
+2. Conviene distinguir en la documentación entre lo que está diseñado, lo que está montado y lo que ya fue probado.
 
 ---
 
 ## Trabajo Futuro Recomendado
 
-### Mejoras a Corto Plazo
-- [ ] [Mejora 1]
-- [ ] [Mejora 2]
+### Próximos pasos
 
-### Mejoras a Mediano Plazo
-- [ ] [Feature adicional 1]
-- [ ] [Optimización 1]
+- [ ] Definir y probar la fijación removible entre el actuador, el soporte y la puerta.
+- [ ] Comprobar que el montaje no requiera perforaciones ni modificaciones permanentes en la puerta.
+- [ ] Revisar el funcionamiento del actuador, los botones y el circuito en el montaje final.
+- [ ] Incorporar instrucciones visibles para orientar a quienes no conozcan el sistema.
+- [ ] Registrar observaciones y mediciones en pruebas futuras.
 
-### Escalabilidad
-- [ ] [Consideración para producción masiva]
-- [ ] [Modelo de negocio / sustentabilidad]
-- [ ] [Alianzas estratégicas potenciales]
+### Mejoras posteriores
+
+- Evaluar la instalación en puertas con distintas dimensiones y características.
+- Revisar la resistencia y estabilidad de los soportes durante ciclos repetidos de uso.
+- Evaluar el uso del sistema en otros contextos, manteniendo el carácter removible de la instalación.
 
 ---
 
