@@ -37,17 +37,17 @@ Desarrollar un prototipo que permita controlar la apertura y el cierre de una pu
 
 ### Software
 **Nuevas funcionalidades:**
-- [Feature final 1]
-- [Feature final 2]
+- **Control direccional de potencia (Puente H):** Se reemplaza el control angular PWM (`ESP32Servo`) de la v1 por señales digitales de inversión de polaridad (`RPWM` en pin `D18` para extender y `LPWM` en pin `D19` para retraer), gobernadas por tiempo de carrera (`TIEMPO_RECORRIDO = 10000` ms) y respaldadas por los finales de carrera internos del actuador lineal.
+- **Soporte para doble pulsador sin complejidad extra:** Se mantiene la lectura en el pin `D4` (`PIN_BOTON`) con resistencia interna `INPUT_PULLUP` conectando ambos botones en paralelo hacia `GND`, permitiendo accionar apertura o cierre indistintamente desde ambos lados de la puerta con una única lógica de alternancia (`estadoPuerta`).
 
 **Optimizaciones finales:**
-- [Optimización de código]
-- [Mejora de eficiencia]
+- **Eliminación de librerías externas de servomotores:** Al operar el driver BTS7960 mediante salidas digitales nativas (`digitalWrite`), el código deja de depender de la librería `ESP32Servo`, reduciendo el consumo de memoria y simplificando la compilación.
+- **Modo de reposo energético (`PIN_ENABLE`):** Se traslada el concepto de `detach()` del prototipo Alpha al hardware industrial utilizando los pines `R_EN` y `L_EN` unidos al pin `D21`, apagando por completo los canales del driver tras completar cada recorrido (`detenerMotor()`) para evitar consumo en reposo y calentamiento.
 
 **Manejo de errores:**
-- Implementado manejo robusto de casos extremos
-- Mensajes de error informativos
-- Recuperación automática ante fallas menores
+- **Enclavamiento lógico anti-cortocircuito:** Las funciones `extenderActuador()` y `retraerActuador()` aseguran explícitamente poner en `LOW` el canal opuesto antes de activar el sentido deseado, evitando disparos simultáneos en el puente H.
+- **Filtrado antirrebote (debounce) y trazabilidad:** Se conserva el bloqueo mediante ciclo `while (digitalRead(PIN_BOTON) == LOW)` para evitar múltiples activaciones por pulsaciones prolongadas, junto con mensajes de estado por Monitor Serie a `115200` baudios.
+- **Estado inicial seguro:** En `setup()` se ejecuta `detenerMotor()` antes de iniciar el ciclo principal, garantizando que el actuador permanezca inmovilizado al energizar el sistema.
 
 ### Diseño Mecánico
 - El prototipo Alpha era una representación a escala: el servomotor movía una tablita y no accionaba una puerta.
@@ -118,9 +118,9 @@ No se calcularon porcentajes de mejora ni proyecciones de beneficiarios, porque 
 | Movimiento | El servomotor movía una tablita, no accionaba una puerta. | El actuador lineal está destinado a producir el movimiento de apertura y cierre. |
 | Controlador | ESP32. | Se reutiliza la ESP32. |
 | Actuador | Servomotor MG996R. | Actuador lineal de 12 V, modelo ARF03-12-A1-305-200-C11. |
-| Control de movimiento | El servomotor era controlado desde el circuito del Alpha. | Se considera un driver BTS7960 para controlar la extensión y retracción del actuador. |
-| Entradas | Un botón pulsador. | Dos botones pulsadores. |
-| Montaje mecánico | Prueba a escala, sin unión a una puerta real. | fijación removible entre el actuador, un soporte y la puerta, sin perforarla ni modificarla permanentemente. |
+| Control de movimiento | Señal PWM por ángulos (`0°`/`60°`) con librería `ESP32Servo` y corte térmico por software (`detach()`). | Driver puente H BTS7960 controlado por pines digitales (`D18`/`D19`) y habilitación por hardware (`D21` en `R_EN`/`L_EN`) sin librerías externas. |
+| Entradas | Un botón pulsador en `D4` (`INPUT_PULLUP`). | Dos botones pulsadores en paralelo hacia `D4` (`INPUT_PULLUP`). |
+| Montaje mecánico | Prueba a escala, sin unión a una puerta real. | Fijación removible entre el actuador, un soporte y la puerta, sin perforarla ni modificarla permanentemente. |
 | Prueba con personas | No se registró una prueba de uso con participantes. | Prueba cualitativa en un hogar con cuatro participantes. |
 | Resultados de uso | No aplica: el prototipo representaba el movimiento mediante una tablita. | Los cuatro participantes comprendieron cómo usarlo en el contexto de la prueba. Se sugirió incluir instrucciones visibles para un posible uso en espacios públicos. |
 | Métricas cuantitativas | No registradas. | No se registraron tiempos, tasas de error ni promedios de satisfacción. |
@@ -166,7 +166,7 @@ No se calcularon porcentajes de mejora ni proyecciones de beneficiarios, porque 
 ### Técnicos
 
 1. El prototipo Alpha permitió probar el control del movimiento con una ESP32 y un servomotor, pero mover una tablita a escala no demuestra que el sistema pueda accionar una puerta.
-2. Para pasar a un actuador lineal se deben considerar su alimentación, el driver de control y la forma de conectar mecánicamente el actuador con la puerta.
+2. Para pasar a un actuador lineal se deben considerar su alimentación independiente de 12 V, el aislamiento lógico mediante el driver BTS7960 y el apagado de los canales de habilitación (`R_EN`/`L_EN`) en reposo para mantener la eficiencia energética.
 
 ### De Diseño
 
@@ -205,7 +205,7 @@ No se calcularon porcentajes de mejora ni proyecciones de beneficiarios, porque 
 
 ## Archivos en esta Carpeta
 
-- `v3_codigo_final.ino` - Código final documentado
+- `v3_codigo_final.ino` - Código final documentado para ESP32 y driver BTS7960
 - `v3_esquema_final.png` - Esquema definitivo del circuito
 - `v3_modelo3d_final.f3d` - Diseño 3D completo en Fusion 360
 - `v3_testing_completo.pdf` - Reporte de testing con usuarios
