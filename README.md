@@ -12,9 +12,9 @@
 La solución propuesta por el equipo consiste en desarrollar un dispositivo automatizado, adaptable y de bajo costo, que  permita convertir una puerta convencional en una puerta automática. El sistema estaría diseñado para instalarse sobre una puerta abatible (puerta que gira sobre su propio eje gracias a las bisagras) y realizar su apertura mediante un mexicanismo motorizado. Su activación será mediante un botón ubicado en una posición accesible para los usuarios, además de contar con un sensor que permita la seguridad de las personas y evitar que la puerta se cierre mientras se estas se encuentren atravesándola . 
 
 ### Estado del Proyecto
-- **Versión actual:** v3.0
-- **Última actualización:** 22 Octubre 2026
-- **Estado:** Prototipo alpha
+- **Versión actual:** v2.0
+- **Última actualización:** 22 noviembre 2026
+- **Estado:** Prototipo final
 
 ---
 
