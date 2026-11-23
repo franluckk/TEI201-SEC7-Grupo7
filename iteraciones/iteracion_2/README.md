@@ -50,12 +50,9 @@ Desarrollar un prototipo que permita controlar la apertura y el cierre de una pu
 - Recuperación automática ante fallas menores
 
 ### Diseño Mecánico
-**Encapsulado finalizado:**
-- Diseño optimizado para impresión 3D
-- Todos los componentes integrados
-- Sistema de montaje robusto
-- Accesibilidad para mantenimiento
-- Resistencia a condiciones ambientales
+- El prototipo Alpha era una representación a escala: el servomotor movía una tablita y no accionaba una puerta.
+- Esta iteración está diseñada para accionar una puerta mediante el desplazamiento lineal del actuador.
+- Para transmitir ese movimiento a la puerta se necesita una unión mecánica entre el actuador, una parte fija de la estructura y la puerta.
 
 ---
 
