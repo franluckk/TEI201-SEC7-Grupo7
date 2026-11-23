@@ -8,22 +8,19 @@
    - `01_vista_general.jpg`
 
 2. **Vista general del circuito completo**
-- `02_vista_general_circuito.jpg`
+   - `02_vista_general_circuito.jpeg`
   
 3. **Detalle de conexiones críticas**
-   - `03_detalle_conexiones.jpg`
+   - `03_detalle_conexiones.jpeg`
 
-5. **Vista de sensores montados**
-   - `04_sensores.jpg`
+4. **Vista de actuadores**
+   - `04_actuadores.jpeg`
 
-6. **Vista de actuadores**
-   - `05_actuadores.jpg`
+5. **Encapsulado cerrado (si aplica)**
+   - `05_encapsulado_cerrado.jpg`
 
-7. **Encapsulado cerrado (si aplica)**
-   - `06_encapsulado_cerrado.jpg`
-
-8. **Prototipo en contexto de uso**
-   - `07_contexto_uso.jpg`
+6. **Prototipo en contexto de uso**
+   - `06_contexto_uso.jpg`
 
 ---
 
