@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "author": "Sistema inclusivo de apertura de puertas",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-pushbutton", "id": "btn1", "top": 210, "left": -140, "attrs": { "color": "green" } },
+    { "type": "wokwi-pushbutton", "id": "btn2", "top": 210, "left": -60, "attrs": { "color": "green" } },
+    { "type": "wokwi-led", "id": "led_ext", "top": -50, "left": 260, "attrs": { "color": "green", "label": "RPWM (extender)" } },
+    { "type": "wokwi-led", "id": "led_ret", "top": -10, "left": 260, "attrs": { "color": "red", "label": "LPWM (retraer)" } },
+    { "type": "wokwi-led", "id": "led_en", "top": 30, "left": 260, "attrs": { "color": "yellow", "label": "R_EN + L_EN" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": -45, "left": 200, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "r2", "top": -5, "left": 200, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "r3", "top": 35, "left": 200, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "esp:D4", "btn1:1.l", "purple", [] ],
+    [ "esp:D4", "btn2:1.l", "purple", [] ],
+    [ "btn1:2.l", "esp:GND.1", "black", [] ],
+    [ "btn2:2.l", "esp:GND.1", "black", [] ],
+    [ "esp:D18", "r1:1", "green", [] ],
+    [ "r1:2", "led_ext:A", "green", [] ],
+    [ "esp:D19", "r2:1", "red", [] ],
+    [ "r2:2", "led_ret:A", "red", [] ],
+    [ "esp:D21", "r3:1", "gold", [] ],
+    [ "r3:2", "led_en:A", "gold", [] ],
+    [ "led_ext:C", "esp:GND.2", "black", [] ],
+    [ "led_ret:C", "esp:GND.2", "black", [] ],
+    [ "led_en:C", "esp:GND.2", "black", [] ]
+  ],
+  "dependencies": {}
+}
