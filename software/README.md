@@ -1,24 +1,79 @@
-# Software - Documentación
+# Librerías
 
-Esta carpeta contiene todo el código y documentación del software del prototipo Alpha IoT para el Sistema Inclusivo de Apertura de Puertas.
+## Librerías Estándar (Arduino IDE)
 
-## Carpetas
-* **`src/`**: Código fuente del proyecto (`main.ino` para ESP32, usando pines `D18` para el servomotor MG996R y `D4` para el botón pulsador).
-* **`librerias/`**: Detalles de dependencias necesarias (`ESP32Servo`).
-* **`docs/`**: Documentación técnica, manual de operación y troubleshooting.
+Instalar desde el Library Manager de Arduino IDE:
 
-## Stack Tecnológico
-* **Plataforma**: ESP32 (DOIT DEVKIT V1)
-* **Lenguaje**: C/C++
-* **IDE**: Arduino IDE 2.x
-* **Librerías principales**:
-  * `ESP32Servo` - Versión estándar del Library Manager (Obligatoria para control de PWM seguro y compatible con ESP32).
+1. **ESP32Servo** - v3.0.5 o superior[cite: 68]
+   * **Propósito**: Permite generar señales PWM por hardware de forma segura y específica para el ESP32, lo cual es obligatorio para controlar el servomotor MG996R en el pin `18` (`PIN_SERVO`), ya que la librería `Servo.h` clásica de Arduino no es compatible con la arquitectura del ESP32[cite: 17, 68].
+   * **Instalación**: Sketch > Include Library > Manage Libraries > Buscar "ESP32Servo" (Autor: Kevin Harrington)[cite: 68].
 
-## Instalación y Configuración
-1. **Instalar Arduino IDE**: Descargar versión 2.x desde arduino.cc.
-2. **Configurar ESP32**: Agregar la URL de tarjetas de Espressif en Preferencias (`https://dl.espressif.com/dl/package_esp32_index.json`) e instalar el paquete `esp32` desde el Gestor de Tarjetas.
-3. **Instalar Librerías**: Abrir el Library Manager y buscar `ESP32Servo` (por Kevin Harrington).
-4. **Cargar Código**:
-   * Abrir `src/main.ino`.
-   * Seleccionar placa **"DOIT ESP32 DEVKIT V1"** y el puerto COM correspondiente.
-   * Compilar y subir con el ESP32 conectado por USB y la fuente externa de 5V del servomotor con tierra común (`GND`) unificada.
+## Librerías Personalizadas/Modificadas
+
+Para la fase de este prototipo Alpha, no se requieren librerías personalizadas[cite: 68]. El filtrado de rebotes del botón (`while (digitalRead(PIN_BOTON) == LOW)` con `delay(10)`), los límites de pulso (`PULSO_MIN` = `1000` µs, `PULSO_MAX` = `2000` µs), la frecuencia (`FRECUENCIA_HZ` = `50` Hz) y el control de energía (`motorPuerta.detach()` tras `TIEMPO_MOVIMIENTO_MS` = `1000` ms) se manejan de forma nativa en `src/main.ino`[cite: 17, 66, 68].
+
+## Dependencias Completas
+
+Listado de todas las librerías necesarias para compilar el proyecto[cite: 68]:
+
+| Librería | Versión | Fuente | Obligatoria |
+| :--- | :--- | :--- | :---: |
+| ESP32 Core | Built-in | Espressif Board Manager | ✅ |
+| ESP32Servo | >= 3.0.5 | Arduino Library Manager | ✅ |
+```[cite: 68]
+
+---
+
+### 2. `README.md` de documentación técnica (carpeta `/software/docs`)
+
+```markdown
+# Documentación de Software
+
+## Configuración de Parámetros
+
+Constantes y variables principales definidas en `src/main.ino`:
+
+* **Pines y comunicación**: `PIN_SERVO = 18` (señal PWM para el MG996R), `PIN_BOTON = 4` (pulsador con `INPUT_PULLUP` a `GND`) y `BAUD_RATE = 115200`[cite: 17, 69].
+* **Parámetros del actuador y tiempos**: `PULSO_MIN = 1000` µs, `PULSO_MAX = 2000` µs, `FRECUENCIA_HZ = 50` Hz, `ANGULO_ABIERTO = 60`°, `ANGULO_CERRADO = 0`°, `TIEMPO_MOVIMIENTO_MS = 1000` ms y variable `estadoPuerta` (`false` = cerrado, `true` = abierto)[cite: 17, 69].
+
+## Documentación de Funciones
+
+### Funciones Principales
+
+**`setup()`**[cite: 69]
+* **Propósito:** Inicializar el hardware, configurar la seguridad eléctrica del actuador y establecer la posición de reposo inicial[cite: 69].
+* **Parámetros:** Ninguno[cite: 69].
+* **Retorna:** `void`[cite: 69].
+* **Acciones clave:** Inicia el Monitor Serie a `BAUD_RATE` (`115200`), configura `PIN_BOTON` con `INPUT_PULLUP`, fija la frecuencia a `FRECUENCIA_HZ` (`50` Hz), conecta el servo con `PULSO_MIN` (`1000`) y `PULSO_MAX` (`2000`), lo posiciona en `ANGULO_CERRADO` (`0°`), espera `TIEMPO_MOVIMIENTO_MS` (`1000` ms) y ejecuta `motorPuerta.detach()` de forma preventiva[cite: 17, 69].
+
+**`loop()`**[cite: 69]
+* **Propósito:** Mantener la lectura constante del entorno y ejecutar los movimientos del motor mitigando el consumo térmico y las vibraciones[cite: 17, 69].
+* **Parámetros:** Ninguno[cite: 69].
+* **Retorna:** `void`[cite: 69].
+* **Acciones clave:**[cite: 69]
+  1. Detecta el pulso (`LOW`) en `PIN_BOTON`[cite: 17, 69].
+  2. Invierte la memoria lógica (`estadoPuerta = !estadoPuerta`)[cite: 17, 69].
+  3. Configura la frecuencia (`FRECUENCIA_HZ`) y despierta el motor (`motorPuerta.attach(PIN_SERVO, PULSO_MIN, PULSO_MAX)`)[cite: 17, 69].
+  4. Mueve a `ANGULO_ABIERTO` (`60°`) si `estadoPuerta` es `true`, o a `ANGULO_CERRADO` (`0°`) si es `false`[cite: 17, 69].
+  5. Espera `TIEMPO_MOVIMIENTO_MS` (`1000` ms) y entra en reposo mediante `motorPuerta.detach()`[cite: 17, 69].
+  6. Aplica un ciclo `while (digitalRead(PIN_BOTON) == LOW)` con `delay(10)` como filtro antirrebote (debounce) hasta que el usuario suelta el botón[cite: 17, 69].
+
+## Manual de Operación
+
+### Encendido del Sistema[cite: 69]
+1. Conectar la fuente de alimentación externa de 5V al adaptador Jack para energizar exclusivamente el actuador (MG996R), manteniendo la tierra común (`GND`) unida al ESP32[cite: 4, 69].
+2. Conectar el ESP32 mediante el cable USB al computador o a una fuente de 5V independiente para iniciar el sistema lógico[cite: 18, 69].
+
+### Operación Normal[cite: 69]
+1. Presionar el botón físico una vez[cite: 69]. El sistema leerá la señal (`LOW`), abrirá la puerta (`ANGULO_ABIERTO` = `60°`) y el motor entrará en modo de reposo (`detach()`) automáticamente tras `TIEMPO_MOVIMIENTO_MS` (`1000` ms) para evitar vibraciones y consumo eléctrico continuo[cite: 17, 69].
+2. Presionar el botón nuevamente para cerrar la puerta (`ANGULO_CERRADO` = `0°`) y volver a reposo[cite: 17, 69].
+3. Mantener el botón presionado no generará falsas activaciones gracias al filtro antirrebote (`while`) del código[cite: 17, 69].
+
+### Apagado del Sistema[cite: 69]
+1. Desconectar primero la fuente de poder de 5V del actuador para evitar movimientos erráticos[cite: 69].
+2. Desconectar el cable USB del ESP32 para apagar la placa lógica[cite: 69].
+
+## Troubleshooting
+
+* **El ESP32 se reinicia al presionar el botón**: El motor está sacando corriente de la placa en vez de su fuente externa de 5V; separa la alimentación y mantén unida la tierra común (`GND`)[cite: 31].
+* **El motor vibra o se calienta**: Verifica que los pulsos estén en `1000` a `2000` µs (`PULSO_MIN` y `PULSO_MAX`), que se ejecute `motorPuerta.detach()` tras cada movimiento y que las conexiones de alimentación y `GND` estén firmes[cite: 15, 17, 31].
