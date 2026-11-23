@@ -1,95 +1,50 @@
 # Datos de Testing
 
+### Contexto de la prueba
+
+El sistema está pensado para facilitar la apertura de una puerta a personas con movilidad reducida y también puede ser útil cuando alguien lleva las manos ocupadas. La prueba permitirá observar si los participantes comprenden cómo activar el sistema y qué utilidad le encuentran.
+
+### Aspectos por observar
+
+- Si los participantes comprenden para qué sirve cada botón.
+- Si pueden activar el sistema sin ayuda o necesitan instrucciones.
+- Si el actuador responde a la orden de abrir o cerrar.
+- Qué dificultades aparecen durante el uso.
+- Qué utilidad le encuentran para personas con movilidad reducida o con las manos ocupadas.
+- Qué cambios sugieren para mejorar el prototipo.
+
 ## Archivos de Datos
 
-### `datos_cuantitativos.xlsx`
-Hoja de cálculo con todos los datos recolectados durante testing
+| Participante | Edad | Relación con el equipo | ¿Comprendió cómo usarlo? | Observaciones | Sugerencias |
+|---|---:|---|---|---|---|
+| Alejandra Del Real| 53 | Familiar de un integrante | Si | Comprendió cómo utilizar el sistema  | Mantener el botón en un lugar visible y de fácil acceso |
+| Gonzalo Swinburn| 54 | Familiar de un integrante | Si | Sí, después de una explicación | Para instalarlo en un espacio público, incorporar un cartel visible que indique qué botón presionar para abrir la puerta |
+| Josefa Swinburn| 21| Familiar de un integrante | Si | Comprendió cómo utilizar el sistema | Probar el sistema con instrucciones visibles para personas que no conozcan su funcionamiento |
+| Matias Swinburn | 16 | Familiar de un integrante | Si |Comprendió cómo utilizar el sistema | Mantener las instrucciones breves |
 
-**Estructura sugerida:**
+### Comentarios cualitativos
 
-#### Sheet 1: Datos de Usuarios
-| ID Usuario | Edad | Género | Perfil | Fecha Testing |
-|------------|------|--------|--------|---------------|
-| U01 | [edad] | [M/F/Otro] | [descripción] | [fecha] |
+La prueba se realizó en un hogar, por lo que las personas participantes conocían el contexto y podían comprender con mayor facilidad la función del sistema. En una vivienda, quienes lo instalan o compran generalmente saben para qué sirve y cómo utilizarlo.
 
-#### Sheet 2: Métricas de Usabilidad
-| ID Usuario | Facilidad Uso (1-5) | Satisfacción (1-5) | Tiempo Tarea (seg) | Errores |
-|------------|---------------------|--------------------|--------------------|---------|
-| U01 | 4 | 5 | 45 | 0 |
-
-#### Sheet 3: Métricas de Impacto ODS
-| ID Usuario | Métrica 1 | Métrica 2 | Métrica 3 | Observaciones |
-|------------|-----------|-----------|-----------|---------------|
-| U01 | [valor] | [valor] | [valor] | [texto] |
-
-#### Sheet 4: Feedback Cualitativo
-| ID Usuario | ¿Qué te gustó? | ¿Qué mejorarías? | Otros comentarios |
-|------------|----------------|------------------|-------------------|
-| U01 | [texto] | [texto] | [texto] |
-
----
-
-### `datos_sensores_testing.csv`
-Datos capturados por el prototipo durante sesiones de testing
-
-**Formato:**
-```csv
-timestamp, sensor_1, sensor_2, actuador_1, evento
-2024-11-20 10:15:23, 23.5, 65, ON, usuario_inicio
-2024-11-20 10:15:24, 23.6, 65, ON, normal
-```
-
----
-
-### `comparativa_versiones.xlsx`
-Comparación de métricas entre iteraciones v1, v2, v3
-
-| Métrica | v1 | v2 | v3 | Mejora (%) |
-|---------|-----|-----|-----|------------|
-| Facilidad de uso | 3.2 | 3.8 | 4.5 | +40.6% |
-| Satisfacción | 3.5 | 4.0 | 4.6 | +31.4% |
-| Errores promedio | 2.3 | 1.2 | 0.4 | -82.6% |
-
----
-
-## Análisis Estadístico
-
-### Estadísticos Básicos
-Para cada métrica calcular:
-- Media (promedio)
-- Mediana
-- Desviación estándar
-- Mínimo y máximo
-- Percentiles (25%, 50%, 75%)
-
-### Ejemplo de Tabla de Resumen
-```
-Métrica: Facilidad de Uso (1-5)
-N = 5 usuarios
-Media: 4.2
-Mediana: 4.0
-Desv. Est.: 0.8
-Mín: 3, Máx: 5
-```
+En cambio, en un espacio público, las personas que llegan a la puerta podrían no saber qué hace el botón ni qué acción deben realizar. Por eso, si el sistema se instala en un lugar de uso compartido, se recomienda incorporar instrucciones breves y visibles, por ejemplo, un cartel que indique: **“Presione el botón para abrir la puerta”**.
 
 ---
 
 ## Datos de Impacto ODS
 
-### Baseline vs. Resultado
+### ODS 10: Reducción de las desigualdades
 
-**Antes de la intervención (baseline):**
-- [Indicador 1]: [Valor inicial]
-- [Indicador 2]: [Valor inicial]
+El proyecto busca facilitar la apertura de puertas a personas con movilidad reducida mediante un sistema accionado por botones. Su propósito es reducir una barrera de acceso y favorecer una mayor autonomía en el uso de espacios.
 
-**Después de la intervención:**
-- [Indicador 1]: [Valor medido con prototipo]
-- [Indicador 2]: [Valor medido con prototipo]
+### ODS 12: Producción y consumo responsables
 
-**Mejora:**
-- [Indicador 1]: [% de mejora]
-- [Indicador 2]: [% de mejora]
+El sistema se plantea como una solución removible que pueda instalarse sobre una puerta existente sin realizar modificaciones permanentes en la infraestructura del edificio. Esto permitiría adaptar puertas ya construidas y retirar el mecanismo si fuera necesario, evitando que la instalación dependa de reemplazar la puerta o alterar permanentemente el espacio.
 
+El diseño busca que el sistema pueda adaptarse a distintas puertas, aunque su compatibilidad dependerá de las dimensiones, la estructura y las condiciones de montaje de cada una. Por ello, no se afirma que pueda instalarse sobre cualquier puerta sin ajustes.
+
+### Alcance de esta evaluación
+
+La prueba cualitativa realizada con cuatro participantes permitió recoger observaciones sobre el uso del sistema y la necesidad de incluir instrucciones visibles en espacios públicos. No se midieron indicadores específicos de impacto ODS ni se calcularon porcentajes de mejora; por lo tanto, esta sección describe la relación y contribución potencial del proyecto, no resultados cuantitativos.
 ---
 
 ## Visualización de Datos
