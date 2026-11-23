@@ -34,15 +34,17 @@ Cada carpeta debe incluir:
 
 ## Tabla Comparativa de Iteraciones
 
-| Aspecto | v1 | v2 | v3 |
-|---------|----|----|----| 
-| **Fecha** | [25/10/2026] | [fecha] | [fecha] |
-| **Entradas** | [Botón pulsador] | [lista] | [lista] |
-| **Actuadores** | [Servomotor MG996R] | [lista] | [lista] |
-| **Conectividad** | [ESP32, conexiones cableadas] | [tipo] | [tipo] |
-| **Encapsulado** | ❌ | Prototipo | Finalizado |
-| **Testing** | Prueba del equipo observada por el profesor | 2 usuarios | 5+ usuarios |
-| **Funcionalidad** | 100% | 80% | 100% |
+ Aspecto | v1 | v2 |
+|---|---|---|
+| **Fecha**| 25/10/2026 | 22/11/2026 |
+| **Entradas** | Un botón pulsador | Dos botones pulsadores disponibles en el DEC |
+| **Actuadores** | Servomotor MG996R | Actuador lineal de 12 V, modelo ARF03-12-A1-305-200-C11 |
+| **Controlador** | ESP32 | ESP32 reutilizada del prototipo Alpha |
+| **Control del actuador** | Control del servomotor | Driver puente H BTS7960 |
+| **Alimentación** | Fuente externa de 5 V para el servomotor y conexión USB para la ESP32 | Fuente de 12 V DC y 5 A incluida con el actuador; convertidor DC-DC de 12 V a 5 V para el circuito de control |
+| **Encapsulado** | Sin caja final documentada | Caja electrónica diseñada en Fusion 360, filamento disponible por un integrante del equipo |
+| **Testing** | Prueba del equipo observada por el profesor | Pruebas con los integrantes del grupo y familiares de un integrante |
+| **Funcionalidad** | 100% | 100% |
 
 ---
 
