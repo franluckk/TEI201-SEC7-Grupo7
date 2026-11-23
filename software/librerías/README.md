@@ -1,23 +1,19 @@
 # Librerías
 
-## Librerías Estándar (Arduino IDE)
+## Librerías Estándar (Arduino IDE / ESP32)
 
-Instalar desde el Library Manager de Arduino IDE[cite: 68]:
+Para este prototipo final (Iteración 2) con el driver puente H **BTS7960** y el actuador lineal de **12 V**, no se requieren librerías externas de terceros para el control del motor[cite: 37, 38, 71].
 
-1. **ESP32Servo** - v3.0.5 o superior[cite: 68]
-   * **Propósito**: Permite generar señales PWM por hardware de forma segura y específica para el ESP32, lo cual es obligatorio para controlar el servomotor MG996R en el pin `18` (`PIN_SERVO`), ya que la librería `Servo.h` clásica de Arduino no es compatible con la arquitectura del ESP32[cite: 17, 68].
-   * **Instalación**: Sketch > Include Library > Manage Libraries > Buscar "ESP32Servo" (Autor: Kevin Harrington)[cite: 68].
+* **ESP32 Core (Espressif Board Manager)**: Proporciona el soporte nativo de la placa **DOIT ESP32 DEVKIT V1** y las funciones estándar de entrada/salida digital (`pinMode`, `digitalRead`, `digitalWrite`, `delay`) y comunicación serie (`Serial`) utilizadas en el código en `.cpp`[cite: 6, 32, 38, 39, 66].
 
 ## Librerías Personalizadas/Modificadas
 
-Para la fase de este prototipo Alpha, no se requieren librerías personalizadas[cite: 68]. El filtrado de rebotes del botón (`while (digitalRead(PIN_BOTON) == LOW)` con `delay(10)`), los límites de pulso (`PULSO_MIN` = `1000` µs, `PULSO_MAX` = `2000` µs), la frecuencia (`FRECUENCIA_HZ` = `50` Hz) y el control de energía (`motorPuerta.detach()` tras `TIEMPO_MOVIMIENTO_MS` = `1000` ms) se manejan de forma nativa en `src/main.ino`[cite: 17, 66, 68].
+No se requieren librerías personalizadas ni modificadas para esta iteración[cite: 32, 68]. Toda la lógica de control direccional (`RPWM` y `LPWM`), la habilitación/reposo del driver (`R_EN` y `L_EN` mediante `PIN_ENABLE`), el enclavamiento anti-cortocircuito (`extenderActuador()`, `retraerActuador()`, `detenerMotor()`) y el filtrado antirrebote del botón (`INPUT_PULLUP` con ciclo `while`) se implementan de forma nativa dentro del archivo `.cpp` en `src/`[cite: 37, 38, 39, 44, 66, 68].
 
 ## Dependencias Completas
 
-Listado de todas las librerías necesarias para compilar el proyecto[cite: 68]:
+Listado de dependencias necesarias para compilar y subir el código final del proyecto:
 
-| Librería | Versión | Fuente | Obligatoria |
+| Librería / Paquete | Versión | Fuente | Obligatoria |
 | :--- | :--- | :--- | :---: |
 | ESP32 Core | Built-in | Espressif Board Manager | ✅ |
-| ESP32Servo | >= 3.0.5 | Arduino Library Manager | ✅ |
-```[cite: 68]
