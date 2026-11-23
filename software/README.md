@@ -3,8 +3,8 @@
 Esta carpeta contiene todo el código y documentación del software del prototipo Alpha IoT para el Sistema Inclusivo de Apertura de Puertas.
 
 ## Carpetas
-* **`src/`**: Código fuente del proyecto (`main.ino` para ESP32, usando pines `D18` para el servomotor MG996R y `D4` para el botón pulsador).
-* **`librerias/`**: Detalles de dependencias necesarias (`ESP32Servo`).
+* **`src/`**: Código fuente del proyecto (`código_prototipo_final.cpp` para ESP32, usando pines `D18` para el servomotor MG996R y `D4` para el botón pulsador).
+* **`librerias/`**: Detalles de dependencias necesarias.
 * **`docs/`**: Documentación técnica, manual de operación y troubleshooting.
 
 ## Stack Tecnológico
