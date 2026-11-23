@@ -4,10 +4,7 @@
 
 ## Archivos Requeridos
 
-### Formato Fritzing
-- `circuito_completo.fzz` - Archivo fuente Fritzing
-- `esquema_circuito.png` - Exportación del esquema
-- `pcb_layout.png` - (opcional) Layout de PCB
+
 
 ### Formato Wokwi
 
