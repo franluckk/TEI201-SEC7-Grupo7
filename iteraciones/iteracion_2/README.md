@@ -208,6 +208,5 @@ No se calcularon porcentajes de mejora ni proyecciones de beneficiarios, porque 
 - `v3_codigo_final.ino` - Código final documentado
 - `v3_esquema_final.png` - Esquema definitivo del circuito
 - `v3_modelo3d_final.f3d` - Diseño 3D completo en Fusion 360
-- `v3_fotos/` - Fotografías del prototipo final
 - `v3_testing_completo.pdf` - Reporte de testing con usuarios
-- `v3_comparativa_versiones.xlsx` - Datos comparativos v1-v2-v3
+- `v3_comparativa_versiones.xlsx` - Datos comparativos v1-v2
