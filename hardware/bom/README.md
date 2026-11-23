@@ -24,7 +24,7 @@ Esta lista registra los componentes utilizados o previstos para los prototipos d
 |---:|---|---|---|---:|
 | 1 | Actuador lineal | ARF03-12-A1-305-200-C11; 12 V DC; carrera de 200 mm; carga máxima indicada de 1500 N; velocidad de 6 mm/s; ciclo de trabajo de 10 % | Hangar77 | $44.800 |
 | 1 | Fuente de alimentación | Entrada de 100–240 V AC, 50/60 Hz; salida de 12 V DC, 5 A | Hangar77 | $52.000 |
-| 1 | Microcontrolador ESP32 | Microcontrolador del sistema | Comprado | Aproximadamente $8.000 |
+| 1 | Microcontrolador ESP32 | Microcontrolador del sistema | Comprado | $8.000 |
 | 1 | Driver puente H BTS7960 | Módulo para controlar el sentido de movimiento del actuador |  Mercado Libre  | $11.500 |
 | 1 | Convertidor DC-DC | Entrada de 12 V; salida de 5 V, hasta 3 A (15 W) |  Mercado Libre  | $9.990 |
 | 2 | Botones pulsadores | Entradas de control ubicadas a ambos lados de la puerta | Proporcionados por el DEC | $0 |
