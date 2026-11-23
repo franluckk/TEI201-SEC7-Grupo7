@@ -210,3 +210,5 @@ No se calcularon porcentajes de mejora ni proyecciones de beneficiarios, porque 
 - `v3_modelo3d_final.f3d` - Diseño 3D completo en Fusion 360
 - `v3_testing_completo.pdf` - Reporte de testing con usuarios
 - `v3_comparativa_versiones.xlsx` - Datos comparativos v1-v2
+
+```
