@@ -17,10 +17,10 @@ El sistema está pensado para facilitar la apertura de una puerta a personas con
 
 | Participante | Edad | Relación con el equipo | ¿Comprendió cómo usarlo? | Observaciones | Sugerencias |
 |---|---:|---|---|---|---|
-| Alejandra Del Real| 53 | Familiar de un integrante | Si | Comprendió cómo utilizar el sistema  | Mantener el botón en un lugar visible y de fácil acceso |
-| Gonzalo Swinburn| 54 | Familiar de un integrante | Si | Sí, después de una explicación | Para instalarlo en un espacio público, incorporar un cartel visible que indique qué botón presionar para abrir la puerta |
-| Josefa Swinburn| 21| Familiar de un integrante | Si | Comprendió cómo utilizar el sistema | Probar el sistema con instrucciones visibles para personas que no conozcan su funcionamiento |
-| Matias Swinburn | 16 | Familiar de un integrante | Si |Comprendió cómo utilizar el sistema | Mantener las instrucciones breves |
+| P01 | 53 | Familiar de un integrante | Si | Comprendió cómo utilizar el sistema  | Mantener el botón en un lugar visible y de fácil acceso |
+| P02 | 54 | Familiar de un integrante | Si | Sí, después de una explicación | Para instalarlo en un espacio público, incorporar un cartel visible que indique qué botón presionar para abrir la puerta |
+| P03 | 21| Familiar de un integrante | Si | Comprendió cómo utilizar el sistema | Probar el sistema con instrucciones visibles para personas que no conozcan su funcionamiento |
+| P04 | 16 | Familiar de un integrante | Si |Comprendió cómo utilizar el sistema | Mantener las instrucciones breves |
 
 ### Comentarios cualitativos
 
