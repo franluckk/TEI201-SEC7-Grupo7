@@ -11,8 +11,7 @@
 
 ### Formato Wokwi
 
-[Upl[wokwi-project.txt](https://github.com/user-attachments/files/35251522/wokwi-project.txt)
-oading diagram.json…]()
+
 
 <img width="951" height="742" alt="image" src="https://github.com/user-attachments/assets/b69b0b4f-3102-4cf8-8f65-8514b95fedf9" />
 
