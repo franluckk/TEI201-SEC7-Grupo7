@@ -1,4 +1,6 @@
 # Esquemas de Circuito
+<img width="1360" height="1050" alt="esquema_circuito" src="https://github.com/user-attachments/assets/d77786a4-4894-44ae-916b-ae5b6a95d4d5" />
+
 
 ## Archivos Requeridos
 
