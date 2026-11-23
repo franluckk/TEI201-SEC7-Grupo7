@@ -4,41 +4,36 @@
 
 **Fecha:** 22/11/2026   
 **Versión:** v2.0  
-**Avance asociado:** Planificación inicial / Avance #1
+**Estado:** Prototipo Final - sujeto a cambios
 
-
+> Esta documentación registra el estado del prototipo al momento de subirlo a GitHub. El diseño y el montaje pueden recibir ajustes antes de la presentación. Si se realizan cambios, se informarán durante la presentación del 27/11/2026.
 
 ---
 
 ## Descripción
 
-Versión final del prototipo, incorporando todas las mejoras y refinamientos basados en feedback de v2 y testing extensivo con usuarios. Sistema robusto, probado y listo para piloto en contexto real.
+Esta iteración desarrolla una solución de apertura asistida para una puerta convencional, pensada para facilitar su uso a personas con movilidad reducida.
+
+En el prototipo Alpha se comprobó el control del movimiento a escala mediante una ESP32, un botón pulsador y un servomotor MG996R. Para esta iteración se definió un sistema con actuador lineal de 12 V, controlado mediante un driver puente H BTS7960. El diseño contempla dos botones pulsadores y una caja electrónica diseñada en Fusion 360.
+
 
 **Objetivos alcanzados:**
-- Prototipo completamente funcional y robusto
-- Encapsulado finalizado con todos los componentes
-- Validación con 5+ usuarios del grupo objetivo
-- Métricas de impacto ODS cuantificadas
-- Sistema instalable en contexto urbano real
 
-> > Esta documentación registra el estado del prototipo al momento de subirlo a GitHub. El diseño y el montaje pueden recibir ajustes antes de la presentación. Si se realizan cambios, se informarán durante la presentación del 27/11/2026.
+Desarrollar un prototipo que permita controlar la apertura y el cierre de una puerta mediante botones y un actuador lineal, integrando el sistema electrónico en una estructura que pueda instalarse en la puerta.
+
 ---
 
 ## Cambios Respecto a v1
 
 ### Hardware
 **Mejoras implementadas:**
-1. [Mejora 1]
-   - Razón: [Feedback de v2 / necesidad identificada]
-   - Impacto: [Mejora cuantitativa]
+- Se reemplaza el servomotor MG996R por un actuador lineal de 12 V, modelo ARF03-12-A1-305-200-C11, con carrera indicada de 200 mm.
+- Se incorpora un driver puente H BTS7960 para controlar la extensión y retracción del actuador.
+- Se incorpora un convertidor DC-DC de 12 V a 5 V para alimentar el circuito de control.
+- Se consideran dos botones pulsadores disponibles en el DEC, en lugar del botón utilizado en el prototipo Alpha.
+- Se reutiliza la ESP32 del prototipo Alpha.
+- Se utiliza la fuente de 12 V DC y 5 A que venía con el actuador.
 
-2. [Mejora 2]
-   - Razón: [Feedback de v2 / necesidad identificada]
-   - Impacto: [Mejora cuantitativa]
-
-**Cambios finales:**
-- [Cambio técnico específico]
-- [Optimización final]
 
 ### Software
 **Nuevas funcionalidades:**
