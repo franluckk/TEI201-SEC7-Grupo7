@@ -43,7 +43,7 @@ Cada carpeta debe incluir:
 | **Control del actuador** | Control del servomotor | Driver puente H BTS7960 |
 | **Alimentación** | Fuente externa de 5 V para el servomotor y conexión USB para la ESP32 | Fuente de 12 V DC y 5 A incluida con el actuador; convertidor DC-DC de 12 V a 5 V para el circuito de control |
 | **Encapsulado** | Sin caja final documentada | Caja electrónica diseñada en Fusion 360, filamento disponible por un integrante del equipo |
-| **Testing** | Prueba del equipo observada por el profesor | Pruebas con los integrantes del grupo y familiares de un integrante |
+| **Testing** | Prueba del equipo observada por el profesor | Pruebas con los integrantes del equipo y familiares de un integrante |
 | **Funcionalidad** | 100% | 100% |
 
 ---
@@ -63,59 +63,63 @@ Para solucionarlo hicimos el prototipo alpha a escala para poder utilizar un mot
 - Aprendisajes:
   Aprendimos a entender el circuito y los componentes.
 
+### Versión 2 (Iteración 2) - Versión Final
+**Fecha:** [22/11/2026]  
+**Estado:** Prototipo final
 
-### Versión 2 (Iteración 2) - Primera Mejora
-**Fecha:** [XX/XX/2025]  
-**Estado:** Prototipo funcional mejorado
-
-**Mejoras implementadas:**
-- [Mejora 1]
-- [Mejora 2]
-
-**Problemas pendientes:**
-- [Problema 1]
-- [Problema 2]
-
-### Versión 3 (Iteración 3) - Versión Final
-**Fecha:** [XX/XX/2025]  
-**Estado:** Prototipo de alta resolución
+Esta iteración pasa de una representación a escala a un sistema diseñado para accionar una puerta mediante un actuador lineal de 12 V.
 
 **Mejoras finales:**
-- [Mejora 1]
-- [Mejora 2]
+- **Escala de aplicación:** el Alpha movía una tablita para representar una puerta. Esta iteración utiliza un actuador lineal pensado para accionar una puerta.
+- **Mecanismo de movimiento:** se reemplazó el servomotor MG996R por un actuador lineal de 12 V, modelo ARF03-12-A1-305-200-C11.
+- **Control del movimiento:** se incorporó un driver puente H BTS7960 para controlar la extensión y retracción del actuador.
+- **Entradas de control:** se consideran dos botones pulsadores disponibles en el DEC, en lugar del único botón del Alpha.
+- **Alimentación:** se utiliza la fuente de 12 V DC y 5 A incluida con el actuador, además de un convertidor DC-DC de 12 V a 5 V para el circuito de control.
+- **Caja electrónica:** se diseño una caja en Fusion 360 para alojar los componentes.
+- **Controlador:** se mantiene y reutiliza la ESP32 del Alpha.
+
 
 **Resultado:**
-- Sistema robusto y probado
-- Listo para piloto en terreno
+Se avanzó desde una prueba a escala, en la que el servomotor movía una tablita, hacia el diseño de un sistema pensado para accionar una puerta mediante un actuador lineal. 
+
+Al momento de subir esta documentación el prototipo pueden tener mejoras antes de la presentación del 27/11/2026.
 
 ---
 
 ## Justificación de Cambios
 
 ### Hardware
-**De v1 a v2:**
-- Cambio: [Descripción]
-- Razón: [Justificación técnica]
-- Impacto: [Mejora cuantitativa]
 
-**De v2 a v3:**
-- Cambio: [Descripción]
-- Razón: [Justificación técnica]
-- Impacto: [Mejora cuantitativa]
+ **Cambio:** se reemplazó el servomotor MG996R por un actuador lineal de 12 V y se incorporó el driver BTS7960.  
+  **Razón:** el Alpha solo movía una tablita a escala. Para desarrollar un sistema pensado para accionar una puerta se eligió un actuador lineal.
+
+- **Cambio:** se incorporó un convertidor DC-DC de 12 V a 5 V y se utiliza la fuente incluida con el actuador.  
+  **Razón:** el actuador funciona con 12 V, mientras que el circuito de control requiere una alimentación de menor voltaje.
+
+- **Cambio:** se consideran dos botones pulsadores en lugar de uno.  
+  **Razón:** el sistema requiere entradas para solicitar desde ambos lados. 
+
 
 ### Software
-**De v1 a v2:**
-- [Cambios principales]
 
-**De v2 a v3:**
-- [Cambios principales]
+- **Cambio:** el código deberá controlar las entradas de los dos botones y enviar las señales correspondientes al driver.  
+  **Razón:** el Alpha controlaba un servomotor. la nueva configuración utiliza un driver para controlar un actuador lineal.  
+ 
+### Diseño mecánico
+
+- **Cambio:** se pasa de una tablita a escala a un diseño pensado para accionar una puerta con un actuador lineal.  
+  **Razón:** el Alpha permitió comprobar el movimiento de un mecanismo pequeño, pero no accionaba una puerta. La segunda iteración busca aplicar el movimiento a la puerta.
+
+- **Cambio:** se diseño una caja electrónica en Fusion 360.  
+  **Razón:** el nuevo sistema integra más componentes electrónicos que deben alojarse en el montaje.
+
+
 
 ### Diseño 3D
 **De v1 a v2:**
-- [Cambios en encapsulado]
+- **Cambio:** se diseño en Fusion 360 una caja para alojar los componentes electrónicos del prototipo.
+- **Razón:** el Alpha era una prueba a escala y no tenía una caja electrónica diseñada para esta configuración. La Iteración 2 incorpora componentes distintos, como el driver BTS7960 y el convertidor DC-DC, que deben organizarse dentro del montaje.
 
-**De v2 a v3:**
-- [Cambios finales]
 
 ---
 
@@ -123,14 +127,6 @@ Para solucionarlo hicimos el prototipo alpha a escala para poder utilizar un mot
 
 ### Feedback del Avance #1 → Cambios en v2
 1. [Comentario profesor/ayudante]
-   - Acción tomada: [Descripción]
-
-### Feedback del Avance #2 → Cambios en v3
-1. [Comentario profesor/ayudante]
-   - Acción tomada: [Descripción]
-
-### Feedback de Usuarios → Cambios en v3
-1. [Comentario común de usuarios]
    - Acción tomada: [Descripción]
 
 ---
