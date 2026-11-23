@@ -13,7 +13,8 @@
 
 
 
-<img width="951" height="742" alt="image" src="https://github.com/user-attachments/assets/b69b0b4f-3102-4cf8-8f65-8514b95fedf9" />
+<img width="947" height="722" alt="image" src="https://github.com/user-attachments/assets/3bc6f8f3-e050-49b2-b37b-1cb26e0eff5c" />
+
 
 [- `wokwi_link.txt` - URL del proyecto online](https://wokwi.com/projects/481444511266939905)
 
