@@ -2,11 +2,10 @@
 
 ## Información General
 
-**Fecha:** 22/11/202  
+**Fecha:** 22/11/2026   
 **Versión:** v2.0  
-**Estado:** Prototipo final documentado para la entrega; sujeto a ajustes
-**Avance asociado:** Avance #2
-**Proyecto:** Sistema de apertura asistida para una puerta  
+**Estado:** Prototipo final documentado para la entrega (sujeto a ajustes)
+
 
 
 ---
