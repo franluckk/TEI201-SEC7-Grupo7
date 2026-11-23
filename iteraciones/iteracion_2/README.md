@@ -4,7 +4,7 @@
 
 **Fecha:** 22/11/2026   
 **Versión:** v2.0  
-**Estado:** Prototipo final documentado para la entrega (sujeto a ajustes)
+**Avance asociado:** Planificación inicial / Avance #1
 
 
 
