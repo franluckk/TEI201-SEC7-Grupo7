@@ -30,7 +30,7 @@ Esta lista registra los componentes utilizados o previstos para los prototipos d
 | 2 | Botones pulsadores | Entradas de control ubicadas a ambos lados de la puerta | Proporcionados por el DEC | $0 |
 | Según montaje | Cables para la ESP32 y las conexiones | Cables que el equipo ya tenía disponibles | Ya disponibles | $0 |
 | Según diseño | Soportes y elementos de fijación | Pernos, tuercas y arandelas necesarios para el montaje | el equipo ya tenia disponibles | $0 |
-| 1 | Caja para electrónica | Carcasa diseñada en Fusion 360 | En diseño | Pendiente |
+| 1 | Caja para electrónica | Carcasa diseñada en Fusion 360 | En diseño | $0  |
 ---
 
 ## Archivos a Incluir
